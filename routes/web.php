@@ -1,18 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\EventoController;
+use App\Http\Controllers\EquipoController;
+use App\Http\Controllers\ParticipacionController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Rutas públicas (sin autenticación)
+Route::resource('eventos', EventoController::class);
+Route::resource('equipos', EquipoController::class);
+Route::resource('participaciones', ParticipacionController::class);
+
+// Puedes mantener esto si tienes login/register activos con Breeze o UI
+#require __DIR__.'/auth.php';
