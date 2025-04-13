@@ -64,3 +64,47 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# SGED - Sistema de Gestión de Eventos Deportivos
+
+Este proyecto está desarrollado en **Laravel 11** y permite gestionar eventos deportivos, equipos y participaciones. Incluye autenticación mediante Laravel Breeze y protección de rutas mediante middleware `auth`.
+
+---
+
+## ✅ Requisitos Previos
+
+Antes de iniciar, asegúrate de tener instalados:
+
+### 1. XAMPP
+Descargar desde:  
+👉 https://www.apachefriends.org/es/index.html  
+- Activa **Apache** y **MySQL** desde el panel de control.
+
+### 2. Composer
+Descargar desde:  
+👉 https://getcomposer.org/download/  
+- Es necesario para gestionar dependencias de Laravel.
+
+---
+
+## ⚙️ Instalación del Proyecto
+
+### 1. Clona el repositorio (o copia el código fuente)
+```bash
+cd C:\xampp\htdocs
+git clone https://github.com/tu-usuario/sged.git
+cd sged
+```
+### Comandos para ejecucción
+```bash
+Dependencias composer install
+Migrations php artisan migrate
+Npmdependency npm install
+runProject   php artisan serve
+```
+
+### Comandos para ejecucción
+```bash
+BasedeDatos la base de datos  debe estar creada se llama con en el archivo .env  
+DB_DATABASE=sged
+```
