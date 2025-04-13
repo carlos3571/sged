@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Evento;
 use Illuminate\Http\Request;
+
 
 class EventoController extends Controller
 {
@@ -13,9 +15,10 @@ class EventoController extends Controller
      */
     public function index()
     {
-        $evento = EqEventouipo::all();
-        return view('evento.index', compact('evento'));
+        $eventos = Evento::all(); // 🔧 Corregido: nombre debe coincidir con la vista
+        return view('eventos.index', compact('eventos'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -58,7 +61,6 @@ class EventoController extends Controller
     {
         $evento = Evento::findOrFail($id);
         return view('eventos.show', compact('evento'));
-    
     }
 
     /**
@@ -94,7 +96,6 @@ class EventoController extends Controller
         $evento->update($request->all());
 
         return redirect()->route('eventos.index')->with('success', 'Evento actualizado correctamente.');
-   
     }
 
     /**
@@ -109,6 +110,5 @@ class EventoController extends Controller
         $evento->delete();
 
         return redirect()->route('eventos.index')->with('success', 'Evento eliminado.');
-    
     }
 }

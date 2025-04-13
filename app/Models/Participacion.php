@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Participacion extends Model
 {
+    use HasFactory;
+    // 👇 Esta línea corrige el error de nombre de tabla
+    protected $table = 'participaciones';
      // Campos que se pueden asignar masivamente
+
      protected $fillable = [
         'evento_id',
         'equipo_id',
