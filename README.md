@@ -80,6 +80,12 @@ Descargar desde:
 👉 https://www.apachefriends.org/es/index.html  
 - Activa **Apache** y **MySQL** desde el panel de control.
 
+#### Comandos para ejecucción
+```bash
+BasedeDatos la base de datos  debe estar creada se llama con en el archivo .env  
+DB_DATABASE=sged
+```
+
 ### 2. Composer
 Descargar desde:  
 👉 https://getcomposer.org/download/  
@@ -103,8 +109,3 @@ Npmdependency npm install
 runProject   php artisan serve
 ```
 
-### Comandos para ejecucción
-```bash
-BasedeDatos la base de datos  debe estar creada se llama con en el archivo .env  
-DB_DATABASE=sged
-```
